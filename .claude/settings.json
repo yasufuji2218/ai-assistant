@@ -1,11 +1,18 @@
 {
   "permissions": {
-    "defaultMode": "plan",
-    "deny": ["Edit"],
+    "defaultMode": "default",
+    "disableBypassPermissionsMode": "disable",
     "allow": [
-      "Bash(git status)",
-      "Bash(git diff *)",
-      "Bash(git log *)"
+      "Bash(uv run pytest *)"
+    ],
+    "ask": [
+      "Bash(uv run maid-agent *)",
+      "Bash(uv add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
+    ],
+    "deny": [
+      "Read(.env)"
     ]
   }
 }
